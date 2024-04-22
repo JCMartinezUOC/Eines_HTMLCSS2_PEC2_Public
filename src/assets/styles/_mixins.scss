@@ -17,12 +17,13 @@ $site-breakpoints: (
 ) !default;
 $grid-breakpoints: (
   xs: 0,
-  sm: em-number(576px),
-  md: em-number(768px),
-  lg: em-number(992px),
-  xl: em-number(1200px),
-  xxl: em-number(1400px)
+  sm: em-pixels(576px),
+  md: em-pixels(768px),
+  lg: em-pixels(992px),
+  xl: em-pixels(1200px),
+  xxl: em-pixels(1400px)
 );
+
 
 @mixin screen($breakpoint) {
   @if map-has-key($site-breakpoints, $breakpoint) {

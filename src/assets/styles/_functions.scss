@@ -3,6 +3,6 @@
 @function em($pixels, $context: $font-initial-size) {
   @return #{math.div($pixels, $context)}em;
 }
-@function em-number($pixels, $context: $font-initial-size) {
-  @return math.div($pixels, $context);
+@function em-pixels($pixels, $context: $font-initial-size) {
+  @return math.div($pixels, $context) * $context;
 }
