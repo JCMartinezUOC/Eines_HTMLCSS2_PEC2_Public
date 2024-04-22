@@ -1,0 +1,33 @@
+/*
+$breakpoints-site: (
+    "phone-only": (max-width: em(768px)),
+    "tablet-portrait-up": (min-width: em(768px)),
+    "tablet-landscape-up": (min-width: em(992px)),
+    "desktop-up": (min-width: em(1200px)),
+    "extra-up": (min-width: em(1450px))
+) !default;
+*/
+$site-breakpoints: (
+    "xs": (max-width: em(575.98px)),
+    "sm": (min-width: em(576px)),
+    "md": (min-width: em(768px)),
+    "lg": (min-width: em(992px)),
+    "xl": (min-width: em(1200px)),
+    "xxl": (min-width: em(1400px))
+) !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: em-number(576px),
+  md: em-number(768px),
+  lg: em-number(992px),
+  xl: em-number(1200px),
+  xxl: em-number(1400px)
+);
+
+@mixin screen($breakpoint) {
+  @if map-has-key($site-breakpoints, $breakpoint) {
+    @media #{inspect(map-get($site-breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+}
