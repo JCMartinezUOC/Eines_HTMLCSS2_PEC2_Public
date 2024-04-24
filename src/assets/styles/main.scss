@@ -34,11 +34,12 @@
  */
 
 @layer layouts {
-    @import "layouts/home";
+    @import "layouts/body";
 }
 @layer blocks {
     @import "blocks/footer";
     @import "blocks/navbar";
+    @import "blocks/poster";
 }
 
 /**
