@@ -22,6 +22,7 @@
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
+@import 'npm:baguettebox.js/dist/baguetteBox.min.css';
 
 @layer bootstrap {
     @import "npm:bootstrap/scss/bootstrap";

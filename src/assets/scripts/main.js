@@ -6,6 +6,7 @@
 // import 'some-node-module';
 // import SomeModule from 'some-node-module';
 import * as bootstrap from 'bootstrap';
+import baguetteBox from 'baguettebox.js';
 
 /**
  * Write any other JavaScript below
@@ -47,9 +48,6 @@ if (document.title) {
   }
 }
 
-/*
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
-*/
+if (document.querySelector('.gallery') !== null) {
+  baguetteBox.run('.gallery', {overlayBackgroundColor: 'oklch(40.1% 0.123 21.57)'});
+}

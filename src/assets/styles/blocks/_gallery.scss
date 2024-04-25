@@ -31,11 +31,20 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        container-type: inline-size;
     }
 
     &__imgcontainer {
         position: relative;
-        width: 300px;
+        width: 20dvmax;
+
+        @container (width < 900px) {
+            width: 30dvmax;
+        }
+
+        @container (width < 400px) {
+            width: 40dvmax;
+        }
     }
 
     &__image {
@@ -55,7 +64,7 @@
         width: 100%;
         opacity: 0;
         transition: .5s ease;
-        background-color: $gallery-lightbox-color;
+        background-color: oklch(from red l c h / 0.6);
         border-radius: 5px;
     }
 
