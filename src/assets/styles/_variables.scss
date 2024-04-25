@@ -11,9 +11,8 @@ $font-family-logo: "Dancing Script", cursive;
 $textlogo-color: red;
 $text-color: black;
 $font-family-serif: "Georgia", "Times New Roman", serif;
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$gallery-lightbox-color: rgba(255 0 0 / 70%);
+
 
 /**
  * Bootstrap variables

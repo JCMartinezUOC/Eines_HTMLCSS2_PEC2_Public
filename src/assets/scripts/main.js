@@ -36,7 +36,7 @@ if (document.title) {
       // Footer
       document.querySelector('#nav-link-footer-3').classList.add("active");
       break;
-    case "Chefs de pueblo: Galeria":
+    case "Chefs de pueblo: Galería":
       // Header
       document.querySelector('#nav-link-header-4').classList.add("active");
       // Footer
