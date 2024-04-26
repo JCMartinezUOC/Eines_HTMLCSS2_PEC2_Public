@@ -1,0 +1,194 @@
+.article {
+    container-type: inline-size;
+    container-name: article;
+
+    &__header {
+        background-image: url("../images/article_header.jpg?as=avif");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: #fff;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 80px;
+        margin-bottom: 50px;
+
+        @container article (width < 768px) {
+            height: 400px;
+        }
+
+        @container article (width < 992px) {
+            height: 450px;
+        }
+    }
+
+    &__title {
+        color: $text-headerarticle-color;
+        text-shadow: 0 2px 2px rgba(0 0 0 / 70%);
+    }
+
+    &__subtitle {
+        color: $text-subtitlearticle-color;
+        text-shadow: 0 2px 2px rgba(0 0 0 / 70%);
+        font-weight: bold;
+    }
+
+    :is(&__section, &__list, &__divider) {
+        margin: auto;
+        width: 90%;
+        container-type: inline-size;
+
+        @container article (width > 768px) {
+            width: 80%;
+        }
+
+        @container article (width > 992px) {
+            width: 45%;
+        }
+
+        /*
+        padding-left: 5%;
+        padding-right: 5%;
+        container-type: inline-size;
+
+        @container article (width > 768px) {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        @container article (width > 992px) {
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+        */
+
+    }
+
+    &__section {
+        display:flex;
+        justify-content: center;
+        row-gap: 5px;
+        column-gap: 20px;
+        flex-direction: column;
+        margin-bottom: 50px;
+        padding-top:25px;
+        padding-left:0.5%;
+        padding-right:0.5%;
+    }
+
+    &__paragraph {
+        font-size: 1.2rem;
+    }
+
+    &__section:has(+ &__quote--side) {
+        @container article (width > 768px) {
+            flex-direction: row;
+            align-items: start;
+        }
+    }
+
+    &__quote {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+    }
+
+    &__quote--side {
+        @container article (width > 768px) {
+            width: 50%;
+        }
+    }
+
+    &__paragraph--side {
+        @container article (width > 768px) {
+            width: 100%;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        counter-reset: item;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 0;
+
+        /*
+        padding-right: 5%;
+        padding-left: 5%;
+
+        @container article (width > 768px) {
+            padding-right: 7%;
+            padding-left: 1.5%;
+        }
+        */
+    }
+
+    &__item {
+        counter-increment: item;
+    }
+
+    &__item:before {
+        margin-right: 10px;
+        content: counter(item);
+        background: lightblue;
+        border-radius: 50%;
+        color: white;
+        width: 1.5em;
+        text-align: center;
+        display: inline-block;
+    }
+
+    &__item-title {
+        font-size: 1.05rem;
+        font-weight: bold;
+    }
+
+    &__item-text {
+        margin-top: 10px;
+        padding-right: 35px;
+        padding-left: 39px;
+
+        @container article (width > 768px) {
+            padding-right: 70px;
+            padding-left: 39px;
+        }
+    }
+
+    &__carousel {
+        margin: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        width: 75%;
+
+        @container article (width < 768px) {
+            width: 100%;
+        }
+
+        @container article (width < 992px) {
+            width: 80%;
+        }
+    }
+
+    &__carousel-img {
+        max-height: 600px;
+        border-radius: 8px;
+        object-fit: cover;
+
+        @container article (width < 768px) {
+            max-height: 500px;
+        }
+
+        @container article (width < 992px) {
+            max-height: 550px;
+        }
+    }
+
+    &__carousel-indicator {
+        height:24px;
+    }
+
+
+}

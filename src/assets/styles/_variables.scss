@@ -9,6 +9,8 @@ $font-family-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Segoe UI Symbol";
 $font-family-logo: "Dancing Script", cursive;
 $textlogo-color: red;
+$text-headerarticle-color: rgb(212, 51, 51);
+$text-subtitlearticle-color: color.scale($textlogo-color, $alpha: -50%);
 $text-color: black;
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
