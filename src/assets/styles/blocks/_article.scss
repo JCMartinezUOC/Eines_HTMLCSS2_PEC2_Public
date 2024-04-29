@@ -3,24 +3,22 @@
     container-name: article;
 
     &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        place-content: center center;
+        height: 500px;
+        margin-bottom: 50px;
+        text-align: center;
+        background-color: #fff;
         background-image: url("../images/article_header.jpg?as=avif");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-color: #fff;
-        height: 500px;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-        text-align: center;
-        gap: 80px;
-        margin-bottom: 50px;
 
         @container article (width < 768px) {
             height: 400px;
         }
-
         @container article (width < 992px) {
             height: 450px;
         }
@@ -32,20 +30,19 @@
     }
 
     &__subtitle {
+        font-weight: bold;
         color: $text-subtitle-article-color;
         text-shadow: 0 2px 2px rgba(0 0 0 / 70%);
-        font-weight: bold;
     }
 
     &__section, &__list, &__divider, &__footer {
-        margin: auto;
         width: 90%;
+        margin: auto;
         container-type: inline-size;
 
         @container article (width > 768px) {
             width: 80%;
         }
-
         @container article (width > 1200px) {
             width: 45%;
         }
@@ -62,14 +59,13 @@
 
     &__section {
         display:flex;
-        justify-content: center;
-        row-gap: 5px;
-        column-gap: 20px;
         flex-direction: column;
-        margin-bottom: 50px;
+        gap: 5px 20px;
+        justify-content: center;
         padding-top:25px;
-        padding-left:0.5%;
         padding-right:0.5%;
+        padding-left:0.5%;
+        margin-bottom: 50px;
     }
 
     &__paragraph {
@@ -101,11 +97,11 @@
     }
 
     &__list {
-        list-style: none;
-        counter-reset: item;
+        padding-left: 0;
         margin-top: 20px;
         margin-bottom: 20px;
-        padding-left: 0;
+        list-style: none;
+        counter-reset: item;
     }
 
     &__item {
@@ -113,14 +109,14 @@
     }
 
     &__item::before {
+        display: inline-block;
+        width: 1.5em;
         margin-right: 10px;
+        color: $text-item-article-color;
+        text-align: center;
         content: counter(item);
         background: $background-item-article-color;
         border-radius: 50%;
-        color: $text-item-article-color;
-        width: 1.5em;
-        text-align: center;
-        display: inline-block;
     }
 
     &__item-title {
@@ -129,9 +125,9 @@
     }
 
     &__item-text {
-        margin-top: 10px;
         padding-right: 35px;
         padding-left: 39px;
+        margin-top: 10px;
 
         @container article (width > 768px) {
             padding-right: 70px;
@@ -140,15 +136,14 @@
     }
 
     &__carousel {
-        margin: auto;
-        border-radius: 8px;
-        margin-bottom: 20px;
         width: 75%;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 8px;
 
         @container article (width < 768px) {
             width: 100%;
         }
-
         @container article (width < 992px) {
             width: 80%;
         }
@@ -156,13 +151,12 @@
 
     &__carousel-img {
         max-height: 600px;
-        border-radius: 8px;
         object-fit: cover;
+        border-radius: 8px;
 
         @container article (width < 768px) {
             max-height: 500px;
         }
-
         @container article (width < 992px) {
             max-height: 550px;
         }

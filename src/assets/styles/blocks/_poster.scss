@@ -1,30 +1,29 @@
 .poster {
+    background-color: #fff;
     background-image: url("../images/poster.jpg?as=avif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: #fff;
     container-type: inline-size;
 
     &__grid {
         display:flex;
         flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        text-align: center;
         gap: 30px;
-        padding-bottom: 50px;
+        place-items: center center;
         padding-top: 20px;
+        padding-bottom: 50px;
+        text-align: center;
     }
 
     &__title {
-        color: $text-poster-title-color;
         align-content: center;
-        text-align: center;
         font-family: $font-family-logo;
         font-size: 64px;
         font-weight: bold;
+        color: $text-poster-title-color;
         color: $textlogo-color;
+        text-align: center;
         text-shadow: 0 2px 2px rgba(0 0 0 / 70%);
     }
 
@@ -33,13 +32,13 @@
     }
 
     &--text {
-        text-align: center;
         align-content: center;
-        color: $text-poster-text-color;
-        text-shadow: 1px 2px 2px rgba(0 0 0 / 80%);
         padding:20px;
-        background-image: initial;
+        color: $text-poster-text-color;
+        text-align: center;
+        text-shadow: 1px 2px 2px rgba(0 0 0 / 80%);
         background-color: $background-poster-text-color;
+        background-image: initial;
         box-shadow: inset 0 3px 10px rgba(0 0 0 / 70%);
     }
 
@@ -49,21 +48,19 @@
         @include screen('md') {
             &__grid {
                 display:grid;
-                grid-template-columns: repeat(12, minmax(0, 1fr));
                 grid-template-rows: repeat(4, minmax(0, 1fr));
+                grid-template-columns: repeat(12, minmax(0, 1fr));
                 gap: 0;
-                padding-top: initial;
                 align-items: initial;
+                padding-top: initial;
                 container-type: inline-size;
 
                 @container (width < 1500px) {
                     grid-template-columns: repeat(10, minmax(0, 1fr));
                 }
-
                 @container (width < 1200px) {
                     grid-template-columns: repeat(8, minmax(0, 1fr));
                 }
-
                 @container (width < 1000px) {
                     grid-template-columns: repeat(6, minmax(0, 1fr));
                 }
@@ -71,26 +68,24 @@
 
             
             &__grid::before {
-                content: '';
-                width: 0;
-                padding-bottom: 100%;
                 grid-row: 1 / 1;
                 grid-column: 1 / 1;
+                width: 0;
+                padding-bottom: 100%;
+                content: '';
             }
             
 
             &__title {
-                grid-column: 5 / 9;
                 grid-row: 2 / 3;
+                grid-column: 5 / 9;
 
                 @container (width < 1500px) {
                     grid-column: 4 / 8;
                 }
-
                 @container (width < 1200px) {
                     grid-column: 3 / 7;
                 }
-
                 @container (width < 1000px) {
                     grid-column: 2 / 6;
                 }
@@ -106,7 +101,6 @@
                 @container (width < 1200px) {
                     grid-column: 2 / 3;
                 }
-
                 @container (width < 1000px) {
                     grid-column: 1 / 2;
                 }
@@ -122,7 +116,6 @@
                 @container (width < 1200px) {
                     grid-column: 3 / 4;
                 }
-
                 @container (width < 1000px) {
                     grid-column: 2 / 3;
                 }
@@ -138,7 +131,6 @@
                 @container (width < 1200px) {
                     grid-column: 4 / 5;
                 }
-
                 @container (width < 1000px) {
                     grid-column: 3 / 4;
                 }
@@ -154,7 +146,6 @@
                 @container (width < 1200px) {
                     grid-column: 5 / 6;
                 }
-
                 @container (width < 1000px) {
                     grid-column: 4 / 5;
                 }
@@ -170,7 +161,6 @@
                 @container (width < 1200px) {
                     grid-column: 6 / 7;
                 }
-
                 @container (width < 1000px) {
                     grid-column: 5 / 6;
                 }
@@ -186,7 +176,6 @@
                 @container (width < 1200px) {
                     grid-column: 7 / 8;
                 }
-
                 @container (width < 1000px) {
                     grid-column: 6 / 7;
                 }

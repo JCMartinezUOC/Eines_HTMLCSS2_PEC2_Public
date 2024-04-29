@@ -1,16 +1,15 @@
 .navbar {
-    padding-left: 2%;
     padding-right: 2%;
+    padding-left: 2%;
     border-bottom: solid $navbar-header-border-color;
 
     @include screen('md') {
-        padding-left: 5%;
         padding-right: 5%;
+        padding-left: 5%;
     }
-
     @include screen('lg') {
-        padding-left: 10%;
         padding-right: 10%;
+        padding-left: 10%;
     }
 
     &__logo {
@@ -22,9 +21,9 @@
     }
 
     &--poster {
+        font-weight: bold;
         color: rgba($textlogo-color, .9);
         text-shadow: 0 2px 2px rgba(0 0 0 / 70%);
-        font-weight: bold;
     }
 
     &--poster-bg {
