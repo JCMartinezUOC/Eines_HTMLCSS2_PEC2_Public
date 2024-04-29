@@ -29,6 +29,7 @@
 
     &--poster-bg {
         background-color: $background-navbar-poster;
+        border-bottom: initial;
 
         @supports (display:grid) {
             @include screen('md') {

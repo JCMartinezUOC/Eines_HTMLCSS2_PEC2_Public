@@ -49,5 +49,5 @@ if (document.title) {
 }
 
 if (document.querySelector('.gallery') !== null) {
-  baguetteBox.run('.gallery', {overlayBackgroundColor: 'oklch(40.1% 0.123 21.57)'});
+  baguetteBox.run('.gallery', {overlayBackgroundColor: 'oklch(40.1% 0.123 21.57 / 70%)'});
 }
