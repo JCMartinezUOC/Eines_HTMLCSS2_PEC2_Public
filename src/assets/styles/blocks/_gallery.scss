@@ -64,7 +64,7 @@
         width: 100%;
         opacity: 0;
         transition: .5s ease;
-        background-color: oklch(from red l c h / 0.6);
+        background-color: $gallery-lightbox;
         border-radius: 5px;
     }
 
@@ -73,7 +73,7 @@
     }
 
     &__icon {
-        color: white;
+        color: $gallery-icon;
         font-size: 20px;
         position: absolute;
         top: 50%;
