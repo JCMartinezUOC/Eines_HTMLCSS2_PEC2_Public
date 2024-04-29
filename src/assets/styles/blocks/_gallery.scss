@@ -64,7 +64,7 @@
         width: 100%;
         opacity: 0;
         transition: .5s ease;
-        background-color: $gallery-lightbox;
+        background-color: oklch(40.1% 0.123 21.57deg);
         border-radius: 5px;
     }
 
