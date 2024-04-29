@@ -37,7 +37,7 @@
         font-weight: bold;
     }
 
-    &__section, &__list, &__divider {
+    &__section, &__list, &__divider, &__footer {
         margin: auto;
         width: 90%;
         container-type: inline-size;
@@ -46,14 +46,19 @@
             width: 80%;
         }
 
-        @container article (width > 992px) {
+        @container article (width > 1200px) {
             width: 45%;
         }
 
     }
 
-    :is(&__section, &__list, &__divider) p {
+    :is(&__section, &__list, &__footer) p {
         color: $text-p-article-color;
+    }
+
+    &__footer {
+        text-align: right;
+        font-style: italic;
     }
 
     &__section {
@@ -108,7 +113,7 @@
         counter-increment: item;
     }
 
-    &__item:before {
+    &__item::before {
         margin-right: 10px;
         content: counter(item);
         background: $background-item-article-color;
