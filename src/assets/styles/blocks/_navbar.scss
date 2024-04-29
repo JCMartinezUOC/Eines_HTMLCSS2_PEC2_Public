@@ -1,6 +1,7 @@
 .navbar {
     padding-left: 2%;
     padding-right: 2%;
+    border-bottom: solid $navbar-header-border-color;
 
     @include screen('md') {
         padding-left: 5%;

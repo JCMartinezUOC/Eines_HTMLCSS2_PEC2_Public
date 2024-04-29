@@ -1,12 +1,3 @@
-/*
-$breakpoints-site: (
-    "phone-only": (max-width: em(768px)),
-    "tablet-portrait-up": (min-width: em(768px)),
-    "tablet-landscape-up": (min-width: em(992px)),
-    "desktop-up": (min-width: em(1200px)),
-    "extra-up": (min-width: em(1450px))
-) !default;
-*/
 $site-breakpoints: (
     "xs": (max-width: em(575.98px)),
     "sm": (min-width: em(576px)),

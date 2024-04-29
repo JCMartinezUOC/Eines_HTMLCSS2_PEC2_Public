@@ -4,16 +4,17 @@
  * Site variables
  */
 $font-initial-size: 16px;
-$font-family-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+$font-family-main: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
+  "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
 $font-family-logo: "Dancing Script", cursive;
-$background-navbar-poster: rgba(white, 0.8);
+$navbar-header-border-color: #f8f9fa;
+$background-navbar-poster: rgba(255 255 255 / 80%);
 $text-poster-title-color: red;
 $background-poster-text-color: red;
 $text-poster-text-color: white;
 $textlogo-color: red;
-$text-header-article-color: rgb(212, 51, 51);
+$text-header-article-color: rgb(212  51  51);
 $text-subtitle-article-color: color.scale($textlogo-color, $alpha: -50%);
 $text-p-article-color: brown;
 $background-item-article-color: red;
@@ -30,9 +31,9 @@ $font-family-serif: "Georgia", "Times New Roman", serif;
   "primary": brown
  );
  
- $navbar-light-color: rgba($textlogo-color, .55);
- $navbar-light-hover-color: rgba($textlogo-color, .7);
- $navbar-light-active-color: rgba($textlogo-color, .9);
- $navbar-light-disabled-color: rgba($textlogo-color, .3);
+ $navbar-light-color: color.scale($textlogo-color, $alpha: -45%);
+ $navbar-light-hover-color: color.scale($textlogo-color, $alpha: -30%);
+ $navbar-light-active-color: color.scale($textlogo-color, $alpha: -10%);
+ $navbar-light-disabled-color: color.scale($textlogo-color, $alpha: -70%);
  $card-border-width: 0;
  $card-border-radius: 0;
