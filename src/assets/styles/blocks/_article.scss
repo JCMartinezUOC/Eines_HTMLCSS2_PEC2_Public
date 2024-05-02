@@ -72,7 +72,7 @@
         font-size: 1.2rem;
     }
 
-    &__section:has(+ &__quote--side) {
+    &__section:has(&__quote--side, &__paragraph--side) {
         @container article (width > 768px) {
             flex-direction: row;
             align-items: start;
